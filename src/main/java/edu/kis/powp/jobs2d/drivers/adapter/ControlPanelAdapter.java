@@ -27,6 +27,8 @@ public class ControlPanelAdapter extends DrawPanelController implements Job2dDri
 		line.setStartCoordinates(this.startX, this.startY);
 		line.setEndCoordinates(x, y);
 
+		setPosition(x, y);
+
 		drawLine(line);
 	}
 
