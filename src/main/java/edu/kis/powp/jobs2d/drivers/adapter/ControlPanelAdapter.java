@@ -12,11 +12,10 @@ import edu.kis.powp.jobs2d.features.DrawerFeature;
 public class ControlPanelAdapter extends DrawPanelController implements Job2dDriver {
 	private int startX = 0, startY = 0;
 
-	private DrawerFeature drawerFeature;
-	private DrawPanelController drawPanelController;
+	private final DrawPanelController drawPanelController;
 
 	public ControlPanelAdapter() {
-		drawerFeature = new DrawerFeature();
+		DrawerFeature drawerFeature = new DrawerFeature();
 		drawPanelController = DrawerFeature.getDrawerController();
 	}
 
