@@ -17,6 +17,7 @@ import edu.kis.powp.jobs2d.events.SelectTestFigureOptionListener;
 import edu.kis.powp.jobs2d.features.DrawerFeature;
 import edu.kis.powp.jobs2d.features.DriverFeature;
 import edu.kis.powp.jobs2d.magicpresets.FiguresJane;
+import edu.kis.powp.command.factory.FactoryOfCommand;
 
 public class TestJobs2dPatterns {
 	private final static Logger logger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
@@ -38,6 +39,18 @@ public class TestJobs2dPatterns {
 		application.addTest("Figure Joe 2", selectTestFigure2OptionListener);
 
 		application.addTest("Figure Jane", (e) -> {FiguresJane.figureScript(new FiguresJaneAdapter());});
+
+		application.addTest("Figure Jane", (e) -> {FiguresJane.figureScript(new FiguresJaneAdapter());});
+
+		application.addTest("Rectangle", (e) -> {
+			FactoryOfCommand.createRectangle(-120, -80, 240, 160)
+					.execute(DriverFeature.getDriverManager().getCurrentDriver());
+		});
+
+		application.addTest("Triangle", (e) -> {
+			FactoryOfCommand.createTriangle(-120, -80, 120, -80, 0, 120)
+					.execute(DriverFeature.getDriverManager().getCurrentDriver());
+		});
 	}
 
 	/**
