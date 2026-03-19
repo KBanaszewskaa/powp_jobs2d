@@ -54,7 +54,7 @@ public class TestJobs2dPatterns {
 		DriverFeature.addDriver("Buggy Simulator", testDriver);
 
 		Job2dDriver testDriver2 = new LineDrawerAdapter(LineFactory.getSpecialLine());
-		DriverFeature.addDriver("Buggy Simulator2", testDriver2);
+		DriverFeature.addDriver("Special Line adapter", testDriver2);
 
 		DriverFeature.updateDriverInfo();
 	}
@@ -68,7 +68,6 @@ public class TestJobs2dPatterns {
 		DefaultDrawerFrame defaultDrawerWindow = DefaultDrawerFrame.getDefaultDrawerFrame();
 		application.addComponentMenuElementWithCheckBox(DrawPanelController.class, "Default Drawer Visibility",
 				new SelectChangeVisibleOptionListener(defaultDrawerWindow), true);
-//		defaultDrawerWindow.setVisible(true);
 	}
 
 	/**
